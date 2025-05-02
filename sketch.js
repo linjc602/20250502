@@ -16,7 +16,7 @@ function setup() {
 }
 
 function draw() {
-  background('#e7c6ff'); // 確保背景顏色一致
+  background('#bde0fe'); // 確保背景顏色一致
 
   // 計算影像顯示位置，讓影像置中
   let x = (width - capture.width) / 2;
