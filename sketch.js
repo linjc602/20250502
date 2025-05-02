@@ -2,9 +2,9 @@ let capture;
 let graphics;
 
 function setup() {
-  // 建立全螢幕畫布，背景顏色為 e7c6ff
+  // 建立全螢幕畫布，背景顏色為bde0fe
   createCanvas(windowWidth, windowHeight);
-  background('#e7c6ff');
+  background('#bde0fe');
 
   // 初始化攝影機影像
   capture = createCapture(VIDEO);
