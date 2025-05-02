@@ -2,7 +2,7 @@ let capture;
 let graphics;
 
 function setup() {
-  // 建立全螢幕畫布，背景顏色為bde0fe
+  // 建立全螢幕畫布，背景顏色為 bde0fe
   createCanvas(windowWidth, windowHeight);
   background('#bde0fe');
 
@@ -28,16 +28,20 @@ function draw() {
   // 設定 graphics 的背景為黑色
   graphics.background(0);
 
-  // 在 graphics 上繪製圓形網格
+  // 在 graphics 上繪製方框與圓形
   for (let i = 0; i < graphics.width; i += 20) {
     for (let j = 0; j < graphics.height; j += 20) {
       // 從攝影機影像中取得對應位置的顏色
       let col = capture.get(i, j);
 
-      // 在 graphics 上繪製圓形
+      // 繪製方框
       graphics.fill(col);
       graphics.noStroke();
-      graphics.ellipse(i + 10, j + 10, 15, 15); // 圓的寬高為 15
+      graphics.rect(i + 1, j + 1, 18, 18); // 方框寬高為 18
+
+      // 繪製中間的圓形
+      graphics.fill(0); // 圓的顏色為黑色
+      graphics.ellipse(i + 10, j + 10, 5, 5); // 圓的直徑為 5
     }
   }
 
